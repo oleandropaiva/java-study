@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int totalAlunos = 50;
+        int totalAlunos = 10;
 
         Scanner leitorScanner = new Scanner(System.in);
         
@@ -11,8 +11,8 @@ public class App {
             String nomeAluno = leitorScanner.nextLine();
             int idadeAluno = leitorScanner.nextInt();
 
-            System.out.printLn("Nome do aluno: " + nomeAluno +
-            "Idade do aluno: " + idadeAluno);
+            System.out.println("Nome do aluno: " + nomeAluno + 
+            " Idade do aluno: " + idadeAluno);
 
             totalAlunos = totalAlunos - 1;
         }
