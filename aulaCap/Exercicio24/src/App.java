@@ -1,26 +1,35 @@
 // 24. Faça um algoritmo que receba “N” números e mostre 
 // positivo, negativo ou zero para cada número;
 
+import java.util.Scanner;
+
 public class App {
 
     int n = 0;
-    public static void main(String[] args) throws Exception {
-        
-        int[] numeros = new int[5];
-        numeros[0] = 1;
-        numeros[1] = 0;
-        numeros[2] = -1;
-        numeros[3] = 2;
-        numeros[4] = -2;
 
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i] > 0) {
-                System.out.println("O número " + numeros[i] + " é positivo");
-            } else if (numeros[i] < 0) {
-                System.out.println("O número " + numeros[i] + " é negativo");
+    public static void main(String[] args) throws Exception {
+
+        Scanner leitorScanner = new Scanner(System.in);
+
+        char desejaContinuar = 's';
+
+        while (desejaContinuar == 'S' || desejaContinuar == 's') {
+
+            System.out.println("Digite um número: ");
+            int numero = leitorScanner.nextInt();
+
+            if (numero == 0) {
+                System.out.println("O número é zero");
             } else {
-                System.out.println("O número " + numeros[i] + " é zero");
+                if (numero > 0) {
+                    System.out.println("O número é maior que zero");
+                } else {
+                    System.out.println("O número é menor que zero");
+                }
             }
+
+            System.out.println("Deseja continuar? (S/N)");
+            desejaContinuar = leitorScanner.next().charAt(0);
         }
     }
-}
+};
